@@ -12,8 +12,7 @@ if registrato== "si":
     print("iniziamo il log-in")
     utente=input("inserisci un nome utente:\n")
     psw=input("inserisci una password:\n")
-    domanda1="gatto"
-    domanda2="it"        
+            
 
 else: 
     utente=input("Iniziamo la registrazione, inserisci il nome utente:\n") #utente non registrato
