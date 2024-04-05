@@ -1,7 +1,4 @@
 #ESERCIZIO 1: 
-#if tavolo == 3: #così blocco il codice infinito
-#        tavolo = False
-#       break
 
 #numero=int(input("dammi un numero: "))
 tavolo=1
@@ -67,12 +64,7 @@ while ciao==True:
     prezzo_totale=(prezzo_topping+prezzo_farcitura+prezzo_base)
     print("il clinete", nome, "dovrà pagare", prezzo_totale)
     
+if tavolo == 5: #così blocco il codice infinito
+        ciao = False
+        print("al momento non ci sono tavoli disponibili, torna più tardi.")
 
-
-
-
-
-
-
-#menu=input("scelta  torta: ")
-#if torta=='''
