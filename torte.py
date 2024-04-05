@@ -59,12 +59,18 @@ while ciao==True:
     else: 
         prezzo_topping=6
 
+#asporto o al tavolo: 
+    dove_mangio=input("vuoi prendere la torta da asporto=0 o al tavolo=1?") 
 
 #prezzo totale: 
-    prezzo_totale=(prezzo_topping+prezzo_farcitura+prezzo_base)
-    print("il clinete", nome, "dovrà pagare", prezzo_totale)
-    
-if tavolo == 5: #così blocco il codice infinito
+    if dove_mangio== "0": 
+        prezzo_totale=(prezzo_topping+prezzo_farcitura+prezzo_base)
+        print("il cliente", nome, "dovrà pagare", prezzo_totale)
+    else: 
+        prezzo_totale=(prezzo_topping+prezzo_farcitura+prezzo_base+2)
+        print("il cliente", nome, "dovrà pagare", prezzo_totale)
+
+    if tavolo == 5: #così blocco il codice infinito
         ciao = False
         print("al momento non ci sono tavoli disponibili, torna più tardi.")
 
