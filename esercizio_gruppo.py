@@ -19,6 +19,7 @@ while True:
         tipo_area=input("quale area vuoi calcolare? se vuoi far finire il gioco scrivi fine ")
         if tipo_area=="fine":
             print("ciao")
+            print(aree) #se esco dal programma mi printa tutte le aree calcolate
             break
         elif tipo_area=="triangolo":
             b=int(input("scrvi misura base del trangolo: "))
