@@ -16,7 +16,7 @@ def fibonacci(n):
 #ciclo per avere sequenza di numeri di fibonacci 
 while True:
     ordine=[0,1]    #la metto qui cosi ad ogni nuovo ciclo torna ad "azzerarsi"
-    gioco=input("vuoi giocare? si/no")
+    gioco=input("vuoi giocare? si/no ")
     if gioco=="no":
         print("ok, ciao")
         break 
