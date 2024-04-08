@@ -27,6 +27,10 @@ class Punto():
         return print("la distanza tra", (self.x,self.y), "e il centro è: ", dist)
 
 
-z=Punto()
-z.muovi()
-z.distanza_origine()
+while True: 
+    inizio=input("scrivi inizia se vuoi mettere le coordinate, se vuoi finire metti 0:" )
+    if inizio=="0":
+        break
+    z=Punto()
+    z.muovi()
+    z.distanza_origine()
