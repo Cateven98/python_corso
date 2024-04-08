@@ -41,6 +41,9 @@ menu={
     print(Ristorante.menu)
 '''
 
+
+   
+
 class Ristorante: 
     aperto=False
     
@@ -73,16 +76,8 @@ class Ristorante:
         Ristorante.aperto==False
         return print("il ristorante sta chiudendo")
     
-    def aggiungi_menu(piatto, prezzo): 
-        aggiungi=("vuoi aggiungere un piatto e il suo prezzo? si/no")
-        if aggiungi=="no":
-            return print("ok, ciao")
-        else:
-            Ristorante.menu["piatto"]= piatto
-            
-            print("il ristorante aggiunto è", piatto, "che costa")
 
-    def togli_menu(piatto, prezzo_piatto): 
+    def aggiungi_menu(piatto, prezzo_piatto): 
         aggiungi=("vuoi aggiungere un piatto e il suo prezzo? si/no")
         if aggiungi=="no":
             return print("ok, ciao")
@@ -90,7 +85,7 @@ class Ristorante:
             piatto=input("che piatto vuoi aggiungere? ")
             prezzo_piatto=input("che prezzo h ail piatto: ")
             Ristorante.menu[piatto]= {"prezzo": prezzo_piatto}
-            print("il ristorante aggiunto è", piatto, "che costa")
+            print("il ristorante aggiunto è", piatto, "che costa", prezzo_piatto)
 
 
 risto1=Ristorante()
@@ -99,17 +94,7 @@ risto1.descrivi_ristorante()
 
 risto1.apri_ristorante()
 
-risto1.aggiungi_menu()
+risto1.togli_menu()
 
 
 
-risto1.aggiungi_menu()
-
-
-
-
-risto1=Ristorante()
-
-risto1.descrivi_ristorante()
-
-risto1.apri_ristorante()
