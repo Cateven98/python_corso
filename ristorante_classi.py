@@ -43,7 +43,7 @@ menu={
 
 class Ristorante: 
     aperto=False
-   # menu={'piatti': {'prezzo': }}
+    menu={'piatti': {'prezzo': 0 }}
 
     def __init__(self):
         nome=input("insersci nome ristorante: ")
@@ -55,11 +55,27 @@ class Ristorante:
     def descrivi_ristorante(self):
         return print("ilristorante", self.nome, "che ha una cucina", self.tipo_cucina)
     
+    def stato_apertura():
+        if Ristorante.aperto=="False": 
+            return print("il ristorante è chiuso torna più tardi")
     
+    def apri_ristorante(apri): 
+        #apri=input("Vuoi sapere se il ristorante è aperto? si/no ")
+        Ristorante.aperto==True
+        return print("il ristorante sta aprendo")
+    
+    def chiudi_ristorante(apri): 
+       #apri=input("Vuoi sapere se il ristorante è aperto? si/no ")
+        Ristorante.aperto==False
+        return print("il ristorante sta chiudendo")
+    
+    def aggiungi_menu(piatto, prezzo_piatto): 
+        pass
+
 
 
 risto1=Ristorante()
 
 risto1.descrivi_ristorante()
 
-
+risto1.apri_ristorante()
