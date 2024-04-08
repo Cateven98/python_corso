@@ -1,9 +1,8 @@
 '''
 classe Ristorante: 
 aperto=False
-dizionario={
-
-
+menu={
+    'piatti': {'prezzo': }
 }
 
     def __init__(self, nome, tipo_cucina):
@@ -26,8 +25,39 @@ dizionario={
     Ristorante.aperto=True
     if Ristorante.aperto==True: 
     print("il ristorante sta aprendo, puoi entrare)
+
+
 #4) chiudi_ristorante()
-#5) aggiungi il menu()
-#6) togli dal menu()
+
+
+#5) aggiungi_al_menu(piatti, prezzi):
+    if 
+
+
+
+#6) togli_dal_menu()
+
 #7)stampa_menu()
+    print(Ristorante.menu)
 '''
+
+class Ristorante: 
+    aperto=False
+   # menu={'piatti': {'prezzo': }}
+
+    def __init__(self, nome, tipo_cucina):
+        nome=input("insersci nome ristorante: ")
+        tipo_cucina=input("inserisci tipo cucina: ")
+        self.nome=nome
+        self.tipo_cucina=tipo_cucina
+    
+
+    def descrivi_ristorante(nome, tipo_cucina):
+        print("ilristorante", nome, "che ha una cucina", tipo_cucina)
+    
+    
+
+
+risto1=Ristorante(risto1.nome, risto1.tipo_cucina) #??????? 
+
+risto1.descrivi_ristorante(risto1.nome, risto1.tipo_cucina)
