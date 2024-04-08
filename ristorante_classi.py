@@ -53,18 +53,18 @@ class Ristorante:
     def descrivi_ristorante(self):
         return print("il nome del ristorante è", self.nome, "che fa cucina", self.tipo_cucina)
     
-    def stato_apertura():
+    def stato_apertura(self):
         if Ristorante.aperto=="False": 
             return print("il ristorante è chiuso torna più tardi")
         else: 
             return print("il ristorante è aperto!")
     
-    def apri_ristorante(apri): 
+    def apri_ristorante(self): 
         #apri=input("Vuoi sapere se il ristorante è aperto? si/no ")
         Ristorante.aperto==True
         return print("il ristorante sta aprendo")
     
-    def chiudi_ristorante(apri): 
+    def chiudi_ristorante(self): 
        #apri=input("Vuoi sapere se il ristorante è aperto? si/no ")
         Ristorante.aperto==False
         print("il ristorante sta chiudendo")
@@ -107,6 +107,7 @@ risto1.aggiungi_menu()
 risto1.togli_menu()'''
 
 
+
 while True:
     utente=input("Ciao ristoratore, benvenuto nel sito, inserisci il tuo nome utente o se vuoi uscire scrivi esci: ")
     if utente.lower=="esci" or "0":
@@ -119,13 +120,6 @@ while True:
         vedi=input("vuoi sapere se il ristorante è chiuso?")
 
 
-
-   
-
-
-    
-    
-       
 
 
 
