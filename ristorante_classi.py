@@ -45,19 +45,21 @@ class Ristorante:
     aperto=False
    # menu={'piatti': {'prezzo': }}
 
-    def __init__(self, nome, tipo_cucina):
+    def __init__(self):
         nome=input("insersci nome ristorante: ")
         tipo_cucina=input("inserisci tipo cucina: ")
         self.nome=nome
         self.tipo_cucina=tipo_cucina
     
 
-    def descrivi_ristorante(nome, tipo_cucina):
-        print("ilristorante", nome, "che ha una cucina", tipo_cucina)
+    def descrivi_ristorante(self):
+        return print("ilristorante", self.nome, "che ha una cucina", self.tipo_cucina)
     
     
 
 
-risto1=Ristorante(risto1.nome, risto1.tipo_cucina) #??????? 
+risto1=Ristorante()
 
-risto1.descrivi_ristorante(risto1.nome, risto1.tipo_cucina)
+risto1.descrivi_ristorante()
+
+
