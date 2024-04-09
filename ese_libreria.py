@@ -45,9 +45,9 @@ class Libreria(Libro):
                     print("libro non in catalogo")
                     break #se non trova il libro break il ciclo for
 
-    #RIVEDI MOSTRA CATALOGO: !!!!!!!!
     def mostra_catalogo(self): 
-        print(f"Titolo:{catalogo.keys()}, Autore:{catalogo[self.titolo]["autore"]}, codice identificativo: {catalogo[self.titolo]["isbn"]}")
+        for j in catalogo.keys():                                                                               #ciclo for mi stampa le chiavi cioè i titoli di ogni j libro e rispettivi autore e isbn 
+            print(f"Titolo:{j}, Autore:{catalogo[j]["autore"]}, codice identificativo: {catalogo[j]["isbn"]}")
 
 
 #PROVE DEI VARI METODI: 
