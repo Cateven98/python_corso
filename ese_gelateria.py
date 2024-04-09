@@ -14,18 +14,22 @@ class Gusti():
         scelte.append(self.gusto1) #aggiungo i gusti alla lista scelte
         scelte.append(self.gusto2)
         scelte.append(self.gusto3)
-        print(scelte)
+        print(scelte)             
 
-
+    def stampa_riepilogo(self):                  #riepilogo gusti 
+        print(f"i gusti scelti sono {g1,g2,g3}")
 
 class Gelato(Gusti):
     def __init__(self,gusto1, gusto2, gusto3, cono): 
         super().__init__(gusto1, gusto2, gusto3)
         self.cono=cono
     
-    def scelgi_cono(self):                                                                           #scelta di cono o coppetta
-        print(f"vuoi un {self.cono} con i seguenti gusti:{self.gusto1, self.gusto2, self.gusto3}")   #riepilogo
-
+    #def scelgi_cono(self):                                                                           #scelta di cono o coppetta
+        #print(f"vuoi un {self.cono} con i seguenti gusti:{self.gusto1, self.gusto2, self.gusto3}")   #riepilogo
+    
+    def scelgi_cono(self): 
+        super().stampa_riepilogo()                       #mi ricollego alla funzione stampa_riepilogo della classe Gusti
+        print(f"e il cliente ha scelto un {self.cono}")
 
 
 while True:                                #1° ciclo se voglio gelato o no
