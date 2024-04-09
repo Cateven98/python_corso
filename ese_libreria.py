@@ -1,4 +1,5 @@
 
+
 class Libro:
     def __init__(self, titolo, autore, isbn): 
         self.titolo=titolo
@@ -46,14 +47,28 @@ class Libreria(Libro):
 
 #prova: 
 
-#definisco il libro: 
-tit=input("inserisci un titolo: ")
-aut=input("insersci un autore: ")
-cod=int(input("insersci un isbn:"))
-catalogo={}                          #definisco catalogo come dizionario cosi lo posso andare a comporre
+while True: 
+    accedi=input("vuoi accedere alla libreria? si/no" )
+    if accedi=="no": 
+        break
+    while True: 
+        prestito=input("vuoi ritirare o riportare libri? ")
+        if prestito=="no": 
+            break
+    
+        #definisco il libro: 
+        tit=input("inserisci un titolo: ")
+        aut=input("insersci un autore: ")
+        cod=int(input("insersci un isbn:"))
+        catalogo={}                          #definisco catalogo come dizionario cosi lo posso andare a comporre
 
-libro1=Libro(tit, aut, cod)          
-libro1.descrizione()
+        libro1=Libro(tit, aut, cod)          
+        libro1.descrizione()
 
-libro1_piu=Libreria(tit, aut, cod, catalogo)
-libro1_piu.aggiungi_libro()
+        libro1_piu=Libreria(tit, aut, cod, catalogo)
+
+        restituisco_libro=input("Vuoi aggiungere il libro al catalogo?")
+        if restituisco_libro=="si": 
+            libro1_piu.aggiungi_libro()
+        else: 
+            print("ok, ciao")
