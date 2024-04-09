@@ -1,4 +1,4 @@
-
+#classe padre: 
 
 class Libro:
     def __init__(self, titolo, autore, isbn): 
@@ -33,42 +33,88 @@ class Libreria(Libro):
             print("attezione libro non in catalogo")
 
 
-    def cerca_per_titolo(self): 
+    def cerca_libro(self): 
         if self.titolo in catalogo: 
-            print(f"")
-            pass
+            print(f"il libro cercato ha titolo: {self.titolo}")
+            for i in catalogo: 
+                if i==self.titolo: 
+                    print(f"il libro trovato è {catalogo[self.titolo]}")
+                else: 
+                    print("libro non in catalogo")
+
 
     def mostra_catalogo(self): 
         print(catalogo)
 
-    
+
+
+#definisco il libro:
+tit=input("inserisci un titolo: ")
+aut=input("insersci un autore: ")
+cod=int(input("insersci un isbn:"))
+
+        
+#definisci dizionario catalogo:
+catalogo={"volare":{"autore": "cate", "isbn": 223 }, 
+          "tartaruga": {"autore": "gio",  "isbn": 224}}
+#print(catalogo)
+
+'''
+for i in catalogo: 
+    if i=="volare": 
+        print("bravo")'''
+
+libro1=Libro(tit, aut, cod)  
+libro1_piu=Libreria(tit, aut, cod, catalogo) 
+
+libro1_piu.aggiungi_libro()
+
+libro1_piu.cerca_libro()
 
 
 
-#prova: 
+#automatizzo DA RIVEDERE: 
+'''
 
 while True: 
     accedi=input("vuoi accedere alla libreria? si/no" )
     if accedi=="no": 
         break
+
     while True: 
-        prestito=input("vuoi ritirare o riportare libri? ")
-        if prestito=="no": 
-            break
-    
-        #definisco il libro: 
-        tit=input("inserisci un titolo: ")
-        aut=input("insersci un autore: ")
-        cod=int(input("insersci un isbn:"))
-        catalogo={}                          #definisco catalogo come dizionario cosi lo posso andare a comporre
+        visualizza_cerca=input("visualizza o cerca libro? ")
+        if visualizza_cerca=="0": 
+            pass
+        while True: 
+            prestito=input("vuoi ritirare=0, riportare libri=1 o cercare=2 o visualizzare intero catalogo=3? ")
+        
+            #definisco il libro:
+            tit=input("inserisci un titolo: ")
+            aut=input("insersci un autore: ")
+            cod=int(input("insersci un isbn:"))
 
-        libro1=Libro(tit, aut, cod)          
-        libro1.descrizione()
+        
+            #definisci dizionario catalogo:
+            catalogo={}
+        
+            libro1=Libro(tit, aut, cod)  
+            libro1_piu=Libreria(tit, aut, cod, catalogo) 
 
-        libro1_piu=Libreria(tit, aut, cod, catalogo)
 
-        restituisco_libro=input("Vuoi aggiungere il libro al catalogo?")
-        if restituisco_libro=="si": 
-            libro1_piu.aggiungi_libro()
-        else: 
-            print("ok, ciao")
+            if prestito=="1": 
+                libro1.descrizione()
+                libro1_piu.aggiungi_libro()
+        
+            elif prestito=="0":
+                libro1.descrizione()
+                libro1_piu.rimuovi_libro()
+        
+            elif prestito=="2":
+                pass
+        
+            elif prestito=="3": 
+                pass
+'''
+
+            
+       
