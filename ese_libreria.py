@@ -32,7 +32,7 @@ class Libreria(Libro):
         else: 
             print("attezione libro non in catalogo")
 
-
+#DA RIVEDEREE ???????
     def cerca_libro(self): 
         if self.titolo in catalogo: 
             print(f"il libro cercato ha titolo: {self.titolo}")
