@@ -1,26 +1,3 @@
-#inizializzo lista_libri=[]
-
-#faccio la classe Libro(self, titolo, autore, libro)
-    
-        #metodo: descrizione(self)
-        #stringa self.titolo, self.autore, self.libro
-        #append a lista_libri ????
-
-#classe figlia Libreria(Libro): 
-    #__init__(titolo, autore, isbn, catalogo)
-    #catalogo= lista_libri
-    #self.catalogo=catalogo
-
-    #def aggiungi_libro():
-        #append a lista_libri
-
-
-#while True:
-    #vuoi aggiungere libri al catalogo?
-    #if no: break
-
-#inizio: 
-
 
 class Libro:
     def __init__(self, titolo, autore, isbn): 
@@ -37,10 +14,24 @@ class Libreria(Libro):
         self.catalogo=catalogo
 
     def aggiungi_libro(self): 
-        catalogo.append(self.titolo)
-        catalogo.append(self.autore)
-        catalogo.append(self.isbn)
+        if self.titolo in catalogo: 
+            print("libro già presente in catalogo")
+        else: 
+            catalogo[self.titolo]={'autore': self.autore, 'isbn': self.isbn}
+            print(f"il libro aggiunto è {self.titolo} dell'autore {self.autore} con codice identificativo {self.isbn}")
         print(catalogo)
+    
+    def rimuovi_libro(self):
+        if self.titolo in catalogo:
+            del catalogo[self.titolo] 
+            print(f"il libro rimosso ha titolo {self.titolo} dell'autore {self.autore} con codice identificativo {self.isbn}")
+        else: 
+            print("attezione libro non in catalogo")
+
+    
+
+    
+
 
 
 #prova: 
@@ -48,7 +39,7 @@ class Libreria(Libro):
 tit=input("inserisci un titolo: ")
 aut=input("insersci un autore: ")
 cod=int(input("insersci un isbn:"))
-catalogo=[]
+catalogo={}
 
 libro1=Libro(tit, aut, cod)
 libro1.descrizione()
